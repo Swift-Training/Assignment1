@@ -1,0 +1,48 @@
+import UIKit
+
+enum operation{
+    case add
+    case subtract
+    case multiply
+    case divide
+}
+
+
+func calculator( a:Int,op:operation,b:Int )->Int{
+  
+    switch op{
+        
+    case .add :
+        return a + b
+        
+    case .subtract :
+        return a - b
+        
+    case .multiply :
+        return a * b
+        
+    case .divide :
+        if b == 0
+        {
+        return 0
+        }
+        return a / b
+            
+    default:
+       return 0
+        
+    }
+}
+
+var resultAdd = calculator(a: 20, op:operation.add, b: 20)
+print(resultAdd)
+
+var resultSub = calculator(a: 40, op:operation.subtract, b: 60)
+print(resultSub)
+
+var resultMul = calculator(a: 40, op:operation.multiply, b: 5)
+print(resultMul)
+
+var resultDiv = calculator(a: 10, op:operation.divide, b: 10)
+print(resultDiv)
+
