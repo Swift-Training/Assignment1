@@ -1,0 +1,22 @@
+
+enum operation{
+    case add
+    case subtract
+    case multiply
+    case divide
+}
+func calculator(a:Int,op:operation,b:Int)->Int{
+    switch op {
+    case operation.add:
+        return a + b;
+    case operation.subtract:
+        return a - b;
+    case operation.multiply:
+        return a * b;
+    case operation.divide:
+        return b != 0 ? a / b : 0;
+    }
+    
+}
+
+print(calculator(a: 30, op:operation.add, b: 20))
