@@ -1,0 +1,27 @@
+enum operation{
+    case add
+    case subtract
+    case multiply
+    case divide
+}
+
+func calculator( a:Int,op:operation,b:Int )->Int{
+    var result : Int
+    
+    if(op == operation.add){
+        result = a + b
+    }
+    else if(op == operation.subtract){
+        result = a - b
+    }
+    else if(op == operation.multiply){
+        result = a * b
+    }
+    else{
+        result = a / b
+    }
+    
+    return result
+}
+
+print(calculator(a: 20, op:operation.subtract, b: 20))
